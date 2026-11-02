@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="A simple reference for common Git commands used with GitHub.">
+  <title>Git &amp; GitHub Quick Reference</title>
+  <style>
+    :root {
+      color-scheme: light;
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      color: #172033;
+      background: #f3f6fb;
+    }
+
+    * { box-sizing: border-box; }
+
+    body {
+      margin: 0;
+      min-height: 100vh;
+      padding: 48px 20px;
+    }
+
+    main {
+      width: min(760px, 100%);
+      margin: 0 auto;
+    }
+
+    header {
+      margin-bottom: 28px;
+      padding: 32px;
+      border-radius: 20px;
+      color: white;
+      background: linear-gradient(135deg, #172033, #344b78);
+      box-shadow: 0 16px 36px #17203320;
+    }
+
+    .eyebrow {
+      margin: 0 0 10px;
+      color: #a9c5ff;
+      font-size: 0.8rem;
+      font-weight: 700;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+    }
+
+    h1 { margin: 0; font-size: clamp(2rem, 6vw, 3rem); }
+    header p:last-child { margin-bottom: 0; color: #e0e8f8; line-height: 1.6; }
+
+    section {
+      margin-top: 20px;
+      padding: 24px;
+      border: 1px solid #e1e7f0;
+      border-radius: 16px;
+      background: white;
+      box-shadow: 0 8px 24px #1720330b;
+    }
+
+    h2 { margin: 0 0 16px; font-size: 1.25rem; }
+    .command { margin: 14px 0; }
+    code {
+      display: block;
+      overflow-x: auto;
+      padding: 12px 14px;
+      border-radius: 9px;
+      color: #e7efff;
+      background: #172033;
+      font-size: 0.9rem;
+    }
+
+    .command p, .note { margin: 8px 0 0; color: #58647a; line-height: 1.5; }
+    footer { padding: 24px 0 8px; color: #647086; text-align: center; font-size: 0.9rem; }
+
+    @media (max-width: 520px) {
+      body { padding: 24px 14px; }
+      header, section { padding: 22px; }
+    }
+  </style>
+</head>
+<body>
+  <main>
+    <header>
+      <p class="eyebrow">A beginner-friendly guide</p>
+      <h1>Git &amp; GitHub</h1>
+      <p>Keep track of your project changes with Git and share your code through GitHub.</p>
+    </header>
+
+    <section aria-labelledby="start-heading">
+      <h2 id="start-heading">Start a repository</h2>
+      <div class="command">
+        <code>git init</code>
+        <p>Creates a new Git repository in the current folder.</p>
+      </div>
+      <div class="command">
+        <code>git status</code>
+        <p>Shows which files have changed and whether they are staged.</p>
+      </div>
+    </section>
+
+    <section aria-labelledby="save-heading">
+      <h2 id="save-heading">Save your changes</h2>
+      <div class="command">
+        <code>git add .</code>
+        <p>Stages all changed files so they can be included in a commit.</p>
+      </div>
+      <div class="command">
+        <code>git commit -m &quot;Describe your change&quot;</code>
+        <p>Saves a snapshot of the staged changes in your local repository.</p>
+      </div>
+    </section>
+
+    <section aria-labelledby="github-heading">
+      <h2 id="github-heading">Connect to GitHub</h2>
+      <div class="command">
+        <code>git remote add origin https://github.com/USER/REPO.git</code>
+        <p>Links this local repository to a repository hosted on GitHub.</p>
+      </div>
+      <div class="command">
+        <code>git push -u origin main</code>
+        <p>Uploads your commits to GitHub. Replace <code>USER</code> and <code>REPO</code> with your account and repository names.</p>
+      </div>
+      <p class="note">Tip: Git is the version-control program; GitHub is an online service that hosts Git repositories.</p>
+    </section>
+
+    <footer>Practice with a test project before using commands on important work.</footer>
+  </main>
+</body>
+</html>
